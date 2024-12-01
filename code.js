@@ -1,10 +1,10 @@
 function augmentingPath(graph, start, end) {
     if (start == end) return [start];
-    if (start !in graph) return [];
-    let flow = {};
+    if (!(start in graph)) return [];
+   /* let flow = {};
      for (let edge in graph) {
         flow[edge] = 0; 
-    }
+    }*/
     
     let visited = new Set();
     let path = [];
@@ -12,17 +12,17 @@ function augmentingPath(graph, start, end) {
         if (current == end) return true;
         visited.add(current);
 
-        for(let next in graph[current]){
-            if(next !in visited){
-                path.append(next);
+        for (let next of Object.keys(graph[current])) {
+            if(!visited.has(next){
+                path.push(next);
                 if(search(next)) return true;
-                path.pop;
+                path.pop();
             }
         }
         return false
     }
-    path.append(start);
-    if(search(end)) return path;
+    path.push(start);
+    if(search(start)) return path;
     
     return [];
 }
