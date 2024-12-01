@@ -32,3 +32,7 @@ accordingly.
 
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+Every node is visited once because the visited set which make that O(V). Then for each node all its neighbors are checked and that counts the edges whxih is O(E). The total time complexity is O(V+E).
+
+Used some of my code from Dijkstras algorithm as a base. “I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.”
