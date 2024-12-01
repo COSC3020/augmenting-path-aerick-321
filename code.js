@@ -13,7 +13,7 @@ function augmentingPath(graph, start, end) {
         visited.add(current);
 
         for (let next of Object.keys(graph[current])) {
-            if(!visited.has(next){
+            if(!visited.has(next)){
                 path.push(next);
                 if(search(next)) return true;
                 path.pop();
@@ -21,6 +21,7 @@ function augmentingPath(graph, start, end) {
         }
         return false
     }
+    
     path.push(start);
     if(search(start)) return path;
     
